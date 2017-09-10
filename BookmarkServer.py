@@ -148,6 +148,6 @@ class Shortener(http.server.BaseHTTPRequestHandler):
             self.wfile.write("that uri was not found".encode())
 
 if __name__ == '__main__':
-    server_address = ('', 8000)
+    server_address = ('PORT', 8000)
     httpd = http.server.HTTPServer(server_address, Shortener)
     httpd.serve_forever()
